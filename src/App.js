@@ -13,15 +13,15 @@ function App() {
   return (
     <div className="container-fluid">
       <Row>
-        <MySide />
         <BrowserRouter>
+        <MySide />
           <Routes>
             <Route path='/' element={<MainPage />}></Route>
             <Route path='/Artists' element={<Artists />}></Route>
             <Route path='/Albums' element={<Albums />}></Route>
           </Routes>
-        </BrowserRouter>
         <MyPlayer />
+        </BrowserRouter>
       </Row>
     </div>
   );

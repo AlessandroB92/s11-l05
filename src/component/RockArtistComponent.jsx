@@ -21,7 +21,6 @@ const RockArtistsComponent = () => {
     }
   };
 
-  // Algoritmo di Fisher-Yates per mescolare l'array
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -31,7 +30,7 @@ const RockArtistsComponent = () => {
   };
 
   useEffect(() => {
-    setRockArtists([]); // Pulizia dello stato all'inizio dell'effetto
+    setRockArtists([]);
   
     const rockArtistsList = ['queen', 'u2', 'thepolice', 'eagles', 'thedoors', 'oasis', 'thewho', 'bonjovi'];
   

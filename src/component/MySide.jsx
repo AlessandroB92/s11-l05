@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, InputGroup, FormControl, Button } from "react-bootstrap";
 import { FaHome, FaBookOpen } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Logo from "../img/Spotify_Logo.png";
 
 const MySide = () => {
@@ -12,7 +13,7 @@ const MySide = () => {
         id="sidebar"
       >
         <div className="nav-container mt-4">
-          <Navbar.Brand className="ms-2" href="index.html">
+          <Navbar.Brand className="ms-2">
             <img
               src={Logo}
               alt="Spotify_Logo"
@@ -26,11 +27,11 @@ const MySide = () => {
               <ul className="text-secondary">
                 <li className="m-2">
                   
-                  <a haref="index.html" ><FaHome className="fs-3 mx-2" /> Home</a>
+                  <Link className="nav-link" to="/" ><FaHome className="fs-3 mx-2" /> Home</Link>
                 </li>
                 <li className="m-2">
                   
-                  <a haref="#"><FaBookOpen className="fs-3 mx-2" /> Your Library</a>
+                  <Link className="nav-link" to="/"><FaBookOpen className="fs-3 mx-2" /> Your Library</Link>
                 </li>
                 <li>
                   <InputGroup className="mt-3 p-2">
@@ -66,14 +67,14 @@ const MySide = () => {
             Login
           </Button>
           <div>
-            <a className="text-white text-decoration-none m-3" href="#">
+            <Link className="text-white text-decoration-none m-3" to="#">
               Cookie Policy
-            </a>
+            </Link>
             |
-            <a className="text-white text-decoration-none m-3" href="#">
+            <Link className="text-white text-decoration-none m-3" to="#">
               
               Privacy
-            </a>
+            </Link>
           </div>
         </div>
       </Navbar>

@@ -21,7 +21,7 @@ const PopArtistsComponent = () => {
     }
   };
 
-  // Algoritmo di Fisher-Yates per mescolare l'array
+
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -31,7 +31,7 @@ const PopArtistsComponent = () => {
   };
 
   useEffect(() => {
-    setPopArtists([]); // Pulizia dello stato all'inizio dell'effetto
+    setPopArtists([]);
   
     const popArtistsList = ['maroon5', 'coldplay', 'onerepublic', 'jamesblunt', 'katyperry', 'arianagrande'];
   
