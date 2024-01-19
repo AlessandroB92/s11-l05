@@ -4,31 +4,32 @@ import RockArtistsComponent from "./RockArtistComponent";
 import PopArtistsComponent from "./PopArtistComponent";
 import HipHopArtistsComponent from "./HipHopArtistsComponent";
 
+
 const MainPage = () => {
   return (
-    <div className="col-12 col-md-9 offset-md-3 mainPage">
+    <div className="col offset-1 me-5 mainPage">
       <Container>
         <Row>
           <Col className="col-9 col-lg-11 mainLinks d-none d-md-flex">
-            <a className="text-decoration-none" href="#">
+            <a className="text-decoration-none" href="/">
               TRENDING
             </a>
-            <a className="text-decoration-none" href="#">
+            <a className="text-decoration-none" href="/">
               PODCAST
             </a>
-            <a className="text-decoration-none" href="#">
+            <a className="text-decoration-none" href="/">
               MOODS AND GENRES
             </a>
-            <a className="text-decoration-none" href="#">
+            <a className="text-decoration-none" href="/">
               NEW RELEASES
             </a>
-            <a className="text-decoration-none" href="#">
+            <a className="text-decoration-none" href="/">
               DISCOVER
             </a>
           </Col>
         </Row>
         <Row>
-          <Col xs={10}>
+          <Col>
             <div id="searchResults" style={{ display: "none" }}>
               <h2>Search Results</h2>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3"></div>

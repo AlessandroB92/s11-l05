@@ -28,7 +28,7 @@ const Albums = () => {
         setAlbum(albumData);
 
         const tracksResponse = await fetch(
-          `https://striveschool-api.herokuapp.com/api/deezer/album/${id}/tracks`, {
+          `https://striveschool-api.herokuapp.com/api/deezer/album/${id}/tracklist`, {
           headers: headers,
         });
 
