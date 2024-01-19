@@ -16,9 +16,9 @@ function App() {
         <BrowserRouter>
         <MySide />
           <Routes>
-            <Route path='/' element={<MainPage />}></Route>
-            <Route path='/Artists' element={<Artists />}></Route>
-            <Route path='/Albums' element={<Albums />}></Route>
+            <Route path='/' element={<MainPage />}/>
+            <Route path='/Artists/:id' element={<Artists />} />
+            <Route path='/Albums/:id' element={<Albums />}/>
           </Routes>
         <MyPlayer />
         </BrowserRouter>

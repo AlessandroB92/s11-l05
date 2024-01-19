@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const PopArtistsComponent = () => {
   const [popArtists, setPopArtists] = useState([]);
@@ -53,24 +54,24 @@ const PopArtistsComponent = () => {
         >
           {popArtists.map((songInfo, index) => (
             <div key={index} className="col text-center" id={songInfo.id}>
-              <a href={`/album_page.html?id=${songInfo.album.id}`}>
+              <Link to={`/album_page.html?id=${songInfo.album.id}`}>
                 <img
                   className="img-fluid"
                   src={songInfo.album.cover_medium}
                   alt={songInfo.title}
                 />
-              </a>
+              </Link>
               <p>
-                <a href={`/album_page.html?id=${songInfo.album.id}`}>
+                <Link to={`/album_page.html?id=${songInfo.album.id}`}>
                   Album: "{songInfo.album.title.length < 16
                     ? `${songInfo.album.title}`
                     : `${songInfo.album.title.substring(0, 16)}..."`
                   }"
-                </a>
+                </Link>
                 <br />
-                <a href={`/artist_page.html?id=${songInfo.artist.id}`}>
+                <Link to={`/Artists`}>
                   Artista: {songInfo.artist.name}
-                </a>
+                </Link>
               </p>
             </div>
           ))}

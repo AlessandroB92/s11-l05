@@ -21,7 +21,7 @@ const HipHopArtistsComponent = () => {
     }
   };
 
-  // Algoritmo di Fisher-Yates per mescolare l'array
+
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -31,7 +31,7 @@ const HipHopArtistsComponent = () => {
   };
 
   useEffect(() => {
-    setHipHopArtists([]); // Pulizia dello stato all'inizio dell'effetto
+    setHipHopArtists([]);
   
     const hipHopArtistsList = ['eminem', 'snoopdogg', 'lilwayne', 'drake', 'kanyewest'];
   
@@ -69,7 +69,7 @@ const HipHopArtistsComponent = () => {
                   }"
                 </a>
                 <br />
-                <a href={`/artist_page.html?id=${songInfo.artist.id}`}>
+                <a href={`/Artists`}>
                   Artista: {songInfo.artist.name}
                 </a>
               </p>
